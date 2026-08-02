@@ -22,9 +22,15 @@ export default function FloatingBookButton() {
           exit={{ scale: 0, opacity: 0 }}
           transition={{ type: "spring", stiffness: 280, damping: 20 }}
           whileTap={{ scale: 0.88 }}
-          className="md:hidden fixed bottom-[88px] right-4 z-40 w-12 h-12 rounded-full gradient-green flex items-center justify-center shadow-luxury"
+          /*
+           * Positioned above the bottom nav (≈ 80px) + safe area.
+           * Only shown on mobile (md:hidden).
+           */
+          className="md:hidden fixed right-4 z-40 w-12 h-12 rounded-full gradient-green flex items-center justify-center shadow-luxury"
+          style={{
+            bottom: "calc(88px + env(safe-area-inset-bottom, 0px))",
+          }}
           aria-label="Book Now"
-          style={{ marginBottom: "env(safe-area-inset-bottom, 0px)" }}
         >
           <CalendarCheck size={20} className="text-white" />
         </motion.a>
