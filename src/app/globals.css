@@ -346,6 +346,28 @@ select {
   overflow: hidden;
 }
 
+.surface-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: var(--card-radius-lg);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.section-shell {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-shell {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 /* =========================================================
    SECTION SPACING HELPERS
    ========================================================= */

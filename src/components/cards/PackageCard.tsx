@@ -17,7 +17,7 @@ export default function PackageCard({ pkg, index }: PackageCardProps) {
       viewport={{ once: true, margin: "-30px" }}
       transition={{ duration: 0.35, delay: index * 0.08 }}
       whileHover={{ y: -3, transition: { duration: 0.2 } }}
-      className={`relative bg-white rounded-[18px] overflow-hidden shadow-premium hover:shadow-premium-lg transition-shadow duration-300 border w-full ${
+      className={`relative bg-white rounded-[20px] overflow-hidden shadow-premium hover:shadow-premium-lg transition-shadow duration-300 border w-full ${
         pkg.popular
           ? "border-green-200/80 ring-1 ring-green-500/10"
           : "border-gray-100/60"
@@ -43,10 +43,10 @@ export default function PackageCard({ pkg, index }: PackageCardProps) {
 
       {/* Content */}
       <div className="p-3.5 sm:p-4">
-        <h3 className="text-[13px] sm:text-[14px] font-bold text-gray-900 leading-snug">
+        <h3 className="text-[13px] sm:text-[14px] font-bold text-slate-900 leading-snug">
           {pkg.name}
         </h3>
-        <p className="mt-1 text-gray-400 text-[11px] line-clamp-2 leading-relaxed">
+        <p className="mt-1 text-slate-600 text-[11px] line-clamp-2 leading-relaxed">
           {pkg.description}
         </p>
         <p className="mt-1 text-[10px] text-green-700 font-medium">{pkg.duration}</p>
@@ -71,10 +71,10 @@ export default function PackageCard({ pkg, index }: PackageCardProps) {
         {/* Price + CTA */}
         <div className="mt-3.5 flex items-center justify-between pt-3 border-t border-gray-100/80">
           <div>
-            <span className="text-[18px] font-bold text-gray-900">
+            <span className="text-[18px] font-bold text-slate-900">
               ₹{pkg.price.toLocaleString()}
             </span>
-            <span className="text-[9px] text-gray-400 block mt-0.5">/person</span>
+            <span className="text-[9px] text-slate-500 block mt-0.5">/person</span>
           </div>
           <button className="px-4 py-2.5 gradient-green text-white font-semibold rounded-xl text-[11px] shadow-sm shadow-green-700/10 hover:shadow-md transition-shadow active:scale-[0.97] min-h-[44px]">
             Book Package

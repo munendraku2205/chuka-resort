@@ -17,7 +17,7 @@ export default function ActivityCard({ activity, index }: ActivityCardProps) {
       viewport={{ once: true, margin: "-30px" }}
       transition={{ duration: 0.3, delay: index * 0.04 }}
       whileHover={{ y: -2, transition: { duration: 0.2 } }}
-      className="group relative rounded-[16px] overflow-hidden shadow-premium hover:shadow-premium-lg transition-shadow duration-300"
+      className="group relative rounded-[20px] overflow-hidden shadow-premium hover:shadow-premium-lg transition-shadow duration-300"
     >
       {/* Image with consistent aspect ratio */}
       <div className="aspect-[4/5] md:aspect-[3/4] overflow-hidden">
@@ -39,10 +39,10 @@ export default function ActivityCard({ activity, index }: ActivityCardProps) {
             <h3 className="text-[12px] sm:text-[13px] font-bold text-white leading-tight truncate">
               {activity.name}
             </h3>
-            <p className="mt-0.5 text-white/55 text-[9px] line-clamp-1 hidden sm:block">
+            <p className="mt-0.5 text-white/75 text-[9px] line-clamp-1 hidden sm:block">
               {activity.description}
             </p>
-            <div className="mt-1.5 flex items-center gap-2 text-[9px] text-white/45">
+            <div className="mt-1.5 flex items-center gap-2 text-[9px] text-white/70">
               <span className="flex items-center gap-0.5">
                 <Clock size={9} />
                 {activity.duration}

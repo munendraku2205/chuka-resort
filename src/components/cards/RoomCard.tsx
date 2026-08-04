@@ -17,7 +17,7 @@ export default function RoomCard({ room, index }: RoomCardProps) {
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.35, delay: index * 0.06 }}
       whileHover={{ y: -3, transition: { duration: 0.2 } }}
-      className="group bg-white rounded-[18px] overflow-hidden shadow-premium hover:shadow-premium-lg transition-shadow duration-300 border border-gray-100/60 w-full"
+      className="group bg-white rounded-[20px] overflow-hidden shadow-premium hover:shadow-premium-lg transition-shadow duration-300 border border-slate-100/80 w-full"
     >
       {/* Image */}
       <div className="relative aspect-[16/10] overflow-hidden">
@@ -30,7 +30,7 @@ export default function RoomCard({ room, index }: RoomCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
 
         {/* Price badge */}
-        <div className="absolute bottom-2.5 left-2.5 px-2.5 py-1 glass rounded-lg">
+        <div className="absolute bottom-2.5 left-2.5 px-2.5 py-1 glass rounded-lg shadow-sm">
           <span className="text-[12px] font-bold text-white">₹{room.price.toLocaleString()}</span>
           <span className="text-[8px] text-white/60 ml-0.5">/night</span>
         </div>
@@ -52,15 +52,15 @@ export default function RoomCard({ room, index }: RoomCardProps) {
 
       {/* Content */}
       <div className="p-3.5 sm:p-4">
-        <h3 className="text-[13px] sm:text-[14px] font-bold text-gray-900 group-hover:text-green-700 transition-colors leading-snug line-clamp-1">
+        <h3 className="text-[13px] sm:text-[14px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug line-clamp-1">
           {room.name}
         </h3>
-        <p className="mt-1 text-gray-400 text-[11px] line-clamp-2 leading-relaxed">
+        <p className="mt-1 text-slate-600 text-[11px] line-clamp-2 leading-relaxed">
           {room.description}
         </p>
 
         {/* Capacity & area */}
-        <div className="mt-2 flex items-center gap-3 text-[10px] text-gray-400">
+        <div className="mt-2 flex items-center gap-3 text-[10px] text-slate-500">
           <span className="flex items-center gap-1">
             <Users size={10} />
             {room.capacity} Guests
@@ -76,7 +76,7 @@ export default function RoomCard({ room, index }: RoomCardProps) {
           {room.amenities.slice(0, 3).map((amenity) => (
             <span
               key={amenity}
-              className="px-2 py-0.5 bg-gray-50 rounded-md text-[9px] text-gray-500 border border-gray-100/80"
+              className="px-2 py-0.5 bg-slate-50 rounded-md text-[9px] text-slate-600 border border-slate-100/80"
             >
               {amenity}
             </span>
@@ -93,7 +93,7 @@ export default function RoomCard({ room, index }: RoomCardProps) {
           <button className="flex-1 py-2.5 gradient-green text-white font-semibold rounded-xl text-[11px] shadow-sm shadow-green-700/10 hover:shadow-md hover:shadow-green-700/15 transition-shadow active:scale-[0.97] min-h-[44px]">
             Book Now
           </button>
-          <button className="px-3.5 py-2.5 border border-gray-200 text-gray-500 font-medium rounded-xl text-[11px] hover:border-green-200 hover:text-green-700 hover:bg-green-50/30 transition-all active:scale-[0.97] min-h-[44px]">
+          <button className="px-3.5 py-2.5 border border-slate-200 text-slate-600 font-medium rounded-xl text-[11px] hover:border-emerald-200 hover:text-emerald-700 hover:bg-emerald-50/30 transition-all active:scale-[0.97] min-h-[44px]">
             Details
           </button>
         </div>

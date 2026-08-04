@@ -51,10 +51,10 @@ export default function HeroSection() {
       {/* ══════════════════════════════════════════
           MOBILE HERO
       ══════════════════════════════════════════ */}
-      <section className="md:hidden bg-[#fdfcfa]">
+      <section className="md:hidden bg-[#fcfbf7]">
 
         {/* Hero image */}
-        <div className="relative h-[40vh] min-h-[240px] max-h-[340px] overflow-hidden">
+        <div className="relative h-[42vh] min-h-[250px] max-h-[360px] overflow-hidden rounded-b-[1.2rem] mx-2 mt-2">
           <img
             src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
             alt="Chuka Eco Resort aerial view"
@@ -78,7 +78,7 @@ export default function HeroSection() {
             transition={{ delay: 0.3, duration: 0.4 }}
             className="absolute bottom-4 left-[0.2rem] right-[0.2rem]"
           >
-            <div className="glass-dark rounded-[16px] px-4 py-3">
+            <div className="glass-dark rounded-[18px] px-4 py-3.5">
               <div className="flex items-center gap-1.5 mb-0.5">
                 <span className="text-sm leading-none">🌿</span>
                 <span className="text-green-300 text-[9px] font-semibold uppercase tracking-widest">
@@ -88,7 +88,7 @@ export default function HeroSection() {
               <h1 className="text-white font-bold text-[18px] leading-tight tracking-tight">
                 Chuka Eco Resort
               </h1>
-              <p className="text-white/50 text-[10px] mt-0.5">Stay • Relax • Explore</p>
+              <p className="text-white/80 text-[10px] mt-0.5">Stay • Relax • Explore</p>
             </div>
           </motion.div>
         </div>
@@ -98,9 +98,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.35 }}
-          className="mx-[0.2rem] -mt-5 relative z-10"
+          className="mx-2 -mt-6 relative z-10"
         >
-          <div className="bg-white rounded-[16px] p-4 shadow-premium-lg border border-gray-100/60">
+          <div className="bg-white rounded-[20px] p-4 shadow-premium-lg border border-slate-100/80">
             <div className="grid grid-cols-2 gap-2 mb-2.5">
               <div>
                 <label htmlFor="hero-checkin" className="text-[9px] text-gray-400 font-semibold uppercase tracking-widest block mb-1">Check-in</label>
@@ -139,14 +139,14 @@ export default function HeroSection() {
           </div>
           <div className="flex gap-3 overflow-x-auto scroll-x pb-1.5 -mx-[0.2rem] px-[0.2rem]">
             {banners.map((banner) => (
-              <div key={banner.id} className="relative min-w-[220px] max-w-[260px] h-[118px] rounded-[14px] overflow-hidden shrink-0 active-scale">
+              <div key={banner.id} className="relative w-full min-w-[220px] h-[120px] rounded-[16px] overflow-hidden shrink-0 active-scale sm:w-auto">
                 <img src={banner.image} alt={banner.title} className="w-full h-full object-cover" loading="lazy" />
                 <div className={`absolute inset-0 bg-gradient-to-r ${banner.gradient}`} />
                 <div className="absolute inset-0 p-3 flex flex-col justify-between">
                   <span className="self-start px-2 py-0.5 bg-white/18 backdrop-blur-sm rounded-md text-[8px] font-bold text-white uppercase tracking-wider">{banner.offer}</span>
                   <div>
                     <h4 className="text-white font-bold text-[12px] leading-tight">{banner.title}</h4>
-                    <p className="text-white/60 text-[9px] mt-0.5">{banner.subtitle}</p>
+                    <p className="text-white/80 text-[9px] mt-0.5">{banner.subtitle}</p>
                     <button className="mt-1.5 px-3 py-1 bg-white/18 backdrop-blur-sm rounded-lg text-[9px] font-semibold text-white border border-white/25 active-scale min-h-[28px]">{banner.cta}</button>
                   </div>
                 </div>
@@ -226,13 +226,13 @@ export default function HeroSection() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400">Luxury</span>
                 <br />in Nature
               </h1>
-              <p className="mt-4 text-[14px] lg:text-[15px] text-white/55 max-w-[420px] leading-relaxed">
+              <p className="mt-4 text-[14px] lg:text-[15px] text-white/80 max-w-[420px] leading-relaxed">
                 Stay, Explore, Celebrate, and Create Memories at Chuka Eco Resort — where the jungle meets five-star comfort.
               </p>
               <div className="mt-5 flex items-center gap-2.5 flex-wrap">
                 <a href="#rooms" className="px-5 py-2.5 gradient-green text-white text-[12px] font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-green-700/20 active:scale-[0.97] min-h-[40px]">Book Now</a>
                 <a href="#about" className="px-5 py-2.5 bg-white/8 hover:bg-white/12 backdrop-blur-sm border border-white/15 text-white text-[12px] font-semibold rounded-xl transition-all min-h-[40px]">Explore Resort</a>
-                <button className="flex items-center gap-2 px-4 py-2.5 text-white/60 hover:text-white text-[12px] font-medium transition-colors min-h-[40px]">
+                <button className="flex items-center gap-2 px-4 py-2.5 text-white/85 hover:text-white text-[12px] font-medium transition-colors min-h-[40px]">
                   <span className="flex items-center justify-center w-7 h-7 bg-white/12 backdrop-blur-sm rounded-full border border-white/15"><Play size={10} fill="white" /></span>
                   Video
                 </button>
@@ -242,7 +242,7 @@ export default function HeroSection() {
                   <div key={stat.label} className="flex items-center gap-4">
                     <div className="text-center">
                       <div className="text-[17px] font-bold text-white">{stat.value}</div>
-                      <div className="text-[9px] text-white/40 uppercase tracking-wider mt-0.5">{stat.label}</div>
+                      <div className="text-[9px] text-white/70 uppercase tracking-wider mt-0.5">{stat.label}</div>
                     </div>
                     {i < STATS.length - 1 && <div className="w-px h-7 bg-white/10" />}
                   </div>

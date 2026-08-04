@@ -40,11 +40,11 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isScrolled
-            ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.06)] border-b border-gray-100/70"
+            ? "bg-white/90 backdrop-blur-xl shadow-[0_8px_24px_rgba(15,23,42,0.08)] border-b border-slate-100/80"
             : "bg-transparent"
         )}
       >
-        <nav className="max-w-[1400px] mx-auto px-[0.2rem] md:px-8 lg:px-12">
+        <nav className="max-w-[1400px] mx-auto px-3 md:px-8 lg:px-12">
           <div className="flex items-center justify-between h-14 md:h-16">
 
             {/* Logo */}
